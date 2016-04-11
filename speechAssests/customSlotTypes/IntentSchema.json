@@ -1,0 +1,52 @@
+{
+  "intents": [
+    {
+      "intent": "GetTicketStatus",
+      "slots": [
+        {
+          "name": "Project",
+          "type": "PROJECT"
+        },
+        {
+          "name": "TicketNumber",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "Range",
+          "type": "RANGE"
+        }
+      ]
+    },
+    {
+      "intent": "GetDeveloperStatus",
+      "slots": [
+        {
+          "name": "Username",
+          "type": "USERNAME"
+        },
+        {
+          "name": "Project",
+          "type": "PROJECT"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
