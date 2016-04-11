@@ -13,7 +13,7 @@
         },
         {
           "name": "Range",
-          "type": "RANGE"
+          "type": "AMAZON.NUMBER"
         }
       ]
     },
@@ -27,11 +27,12 @@
         {
           "name": "Project",
           "type": "PROJECT"
+        },
+        {
+          "name": "Status",
+          "type": "STATUS"
         }
       ]
-    },
-    {
-      "intent": "AMAZON.RepeatIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"

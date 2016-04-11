@@ -9,5 +9,6 @@ GetTicketStatus what is the current status for {Project} {TicketNumber}
 GetTicketStatus what is the status for ticket {Project} {TicketNumber}
 GetTicketStatus what is the current status for {Project} {TicketNumber}
 
-GetDeveloperStatus how many open tickets are there for {Username} and project {Project}
+GetDeveloperStatus how many open tickets are there for user {Username} and project {Project}
+GetDeveloperStatus how many open tickets are there for project {Project} and user {Username}
 GetDeveloperStatus how many {Status} tickets are there for {Project} and {Username}
