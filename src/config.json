@@ -1,7 +1,7 @@
 {
   "username": "eschizoid",
-  "password": "1qaz2wsx",
+  "password": "",
   "maxResults": "1000",
   "endpoint": "https://issues.apache.org/jira/rest/api/2/search",
-  "appId": "amzn1.echo-sdk-ams.app.0df23397-4abf-434e-be14-4bfa0d6b36e4"
+  "appId": ""
 }
