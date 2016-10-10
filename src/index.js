@@ -43,7 +43,7 @@ JirAlexa.prototype.intentHandlers = {
 
         if (!hasProject) {
             speechOutput = {
-                speech: "<speak>" + "I'm sorry, I couldn't find the information looking for." + "</speak>",
+                speech: "<speak>" + "I'm sorry, I couldn't find the information you were looking for." + "</speak>",
                 type: AlexaSkill.speechOutputType.SSML
             };
             alexaResponse.tell(speechOutput);
@@ -79,9 +79,9 @@ JirAlexa.prototype.intentHandlers = {
             if (error) {
                 console.log(error);
                 if (hasTicketNumber) {
-                    speech = "<speak>I'm sorry, I currently do not know the status for ticket: " + projectSlot.value.toUpperCase() + " - " + "<say-as interpret-as='digits'/>" + ticketNumberSlot.value.toString() + "</say-as></speak>";
+                    speech = "<speak>I'm sorry, I I couldn't find the status for the ticket: " + projectSlot.value.toUpperCase() + " - " + "<say-as interpret-as='digits'/>" + ticketNumberSlot.value.toString() + "</say-as></speak>";
                 } else {
-                    speech = "<speak>I'm sorry, I currently do not know the status for project: " + projectSlot.value.toUpperCase() + "</speak>";
+                    speech = "<speak>I'm sorry, I I couldn't find the status for the project: " + projectSlot.value.toUpperCase() + "</speak>";
                 }
                 speechOutput = {
                     speech: speech,
@@ -93,7 +93,7 @@ JirAlexa.prototype.intentHandlers = {
                 if (response.statusCode === 200) {
                     if (hasTicketNumber) {
                         if (body.total === 0) {
-                            speech = "<speak>I'm sorry, I currently do not know the status for ticket " + projectSlot.value + " - " + "<say-as interpret-as='digits'/>" + ticketNumberSlot.value.toString() + "</say-as></speak>";
+                            speech = "<speak>I'm sorry, I couldn't find the the status for the ticket " + projectSlot.value + " - " + "<say-as interpret-as='digits'/>" + ticketNumberSlot.value.toString() + "</say-as></speak>";
                         } else {
                             speech = "" +
                                 "<speak>" +
@@ -119,7 +119,7 @@ JirAlexa.prototype.intentHandlers = {
                     }
                 } else {
                     speechOutput = {
-                        speech: "<speak>" + "I'm sorry, I couldn't find the information looking for." + "</speak>",
+                        speech: "<speak>" + "I'm sorry, I couldn't find the information you were looking for." + "</speak>",
                         type: AlexaSkill.speechOutputType.SSML
                     };
                     alexaResponse.tell(speechOutput);
@@ -138,7 +138,7 @@ JirAlexa.prototype.intentHandlers = {
 
         if (!hasUsername || !hasProject) {
             speechOutput = {
-                speech: "<speak>" + "I'm sorry, I couldn't find the information looking for." + "</speak>",
+                speech: "<speak>" + "I'm sorry, I couldn't find the information you were looking for." + "</speak>",
                 type: AlexaSkill.speechOutputType.SSML
             };
             alexaResponse.tell(speechOutput);
@@ -170,9 +170,9 @@ JirAlexa.prototype.intentHandlers = {
             if (error) {
                 console.log(error);
                 if (hasStatus) {
-                    speech = "<speak>I'm sorry, I currently cannot find tickets for user " + usernameSlot.value + " and project " + projectSlot.value.toUpperCase() + " with status " + statusSlot.value + "</speak>";
+                    speech = "<speak>I'm sorry, I couldn't find tickets related to the user " + usernameSlot.value + " and project " + projectSlot.value.toUpperCase() + " with status " + statusSlot.value + "</speak>";
                 } else {
-                    speech = "<speak>I'm sorry, I currently cannot find tickets for user " + statusSlot.value + " and project " + projectSlot.value.toUpperCase() + "</speak>";
+                    speech = "<speak>I'm sorry, I couldn't find tickets related to the user " + statusSlot.value + " and project " + projectSlot.value.toUpperCase() + "</speak>";
                 }
                 speechOutput = {
                     speech: speech,
@@ -188,7 +188,7 @@ JirAlexa.prototype.intentHandlers = {
                     };
                 } else {
                     speechOutput = {
-                        speech: "<speak>" + "I'm sorry, I couldn't find the information looking for." + "</speak>",
+                        speech: "<speak>" + "I'm sorry, I couldn't find the information you were looking for." + "</speak>",
                         type: AlexaSkill.speechOutputType.SSML
                     };
                 }
